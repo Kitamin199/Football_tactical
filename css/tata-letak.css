@@ -1,0 +1,8 @@
+/* Tata letak halaman: pilihan formasi, grid utama, panel dan tab */
+.forms{max-width:1040px;margin:14px auto 0;padding:0 18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.forms span{color:var(--mut);margin-right:4px}
+main{max-width:1040px;margin:16px auto 40px;padding:0 18px;display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:20px;align-items:start}
+@media(max-width:760px){main{grid-template-columns:1fr}}
+@media(min-width:761px){.left{position:sticky;top:8px}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+[role=tablist]{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}

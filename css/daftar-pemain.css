@@ -1,0 +1,6 @@
+/* Daftar skuad yang bisa diseret */
+.roster{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.roster b{font-size:14px}
+.rl{margin:6px 0}
+.pc{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:3px 11px;margin:2px;font-size:14px;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;background:var(--bg)}
+.pc.on{background:var(--blue);color:#fff;border-color:var(--blue)}

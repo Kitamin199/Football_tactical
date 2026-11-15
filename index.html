@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Papan Taktik Tim Sepakbola: Matematika Diskrit</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+
+<!-- Urutan penting: dasar > tata-letak > lapangan > daftar-pemain -->
+<link rel="stylesheet" href="css/dasar.css">
+<link rel="stylesheet" href="css/tata-letak.css">
+<link rel="stylesheet" href="css/lapangan.css">
+<link rel="stylesheet" href="css/daftar-pemain.css">
+</head>
+<body>
+<div class="stripe"></div>
+<header>
+  <h1>Papan Taktik Tim Sepakbola</h1>
+  <p>Susun starter dari skuad, lalu lihat bagaimana kombinasi, permutasi, dan graf menjelaskan susunan itu.</p>
+</header>
+<div class="forms" id="forms"><span>Formasi:</span></div>
+<main>
+  <div class="left">
+    <svg id="pitch" viewBox="0 0 68 105" role="img" aria-label="Lapangan dengan susunan pemain"></svg>
+    <p class="mut" id="hint" style="margin:8px 0 0"></p>
+    <div class="roster" id="roster"></div>
+  </div>
+  <section class="panel">
+    <div role="tablist" id="tabs"></div>
+    <div id="body"></div>
+  </section>
+</main>
+<script src="js/inti/data-pemain.js"></script>
+<script src="js/inti/fungsi-bantu.js"></script>
+<script src="js/inti/status-aplikasi.js"></script>
+<script src="js/komponen/gambar-lapangan.js"></script>
+<script src="js/komponen/daftar-skuad.js"></script>
+<script src="js/fitur/kombinasi.js"></script>
+<script src="js/fitur/permutasi.js"></script>
+<script src="js/fitur/graf.js"></script>
+<script src="js/komponen/seret-lepas.js"></script>
+<script src="js/utama.js"></script>
+</body>
+</html>
