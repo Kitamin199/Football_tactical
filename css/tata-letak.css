@@ -1,8 +1,13 @@
-/* Tata letak halaman: pilihan formasi, grid utama, panel dan tab */
-.forms{max-width:1040px;margin:14px auto 0;padding:0 18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.forms span{color:var(--mut);margin-right:4px}
-main{max-width:1040px;margin:16px auto 40px;padding:0 18px;display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:20px;align-items:start}
+.forms{max-width:1040px;margin:16px auto 0;padding:0 18px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.forms span{color:var(--mut);margin-right:4px;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+main{max-width:1040px;margin:18px auto 48px;padding:0 18px;display:grid;grid-template-columns:minmax(280px,400px) 1fr;gap:22px;align-items:start}
 @media(max-width:760px){main{grid-template-columns:1fr}}
-@media(min-width:761px){.left{position:sticky;top:8px}}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-[role=tablist]{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+@media(min-width:761px){.left{position:sticky;top:12px}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.panel::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--blue),var(--acc))}
+
+[role=tablist]{display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 18px;background:var(--bg);padding:5px;border-radius:999px;width:fit-content;max-width:100%}
+[role=tablist] button{border:0;background:transparent;padding:7px 16px}
+[role=tablist] button[aria-selected="true"]{background:linear-gradient(135deg,#004d98,#a50044);color:#fff}
+[role=tablist] button:hover{box-shadow:none;transform:none;background:var(--card)}
+[role=tablist] button[aria-selected="true"]:hover{background:linear-gradient(135deg,#004d98,#a50044)}
