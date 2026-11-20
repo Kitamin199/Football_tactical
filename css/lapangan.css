@@ -1,3 +1,13 @@
-/* Lapangan SVG dan bayangan saat drag */
-svg{display:block;width:100%;height:auto;border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none}
-.ghost{position:fixed;z-index:50;pointer-events:none;background:var(--acc);color:#fff;padding:5px 12px;border-radius:999px;font-weight:600;transform:translate(-50%,-130%)}
+svg{display:block;width:100%;height:auto;border-radius:var(--radius);touch-action:none;user-select:none;-webkit-user-select:none}
+
+#pitch{background:repeating-linear-gradient(180deg,#22744b 0 10%,#1b5f3d 10% 20%);border:3px solid var(--card);box-shadow:var(--shadow),0 0 0 1px var(--line)}
+#pitch>rect:first-child{fill:transparent}
+#pitch g[fill="none"]{stroke-opacity:.8}
+
+#pitch>line{stroke-linecap:round}
+#pitch>line[stroke="#ffa94d"]{filter:drop-shadow(0 0 1.2px #ffa94d)}
+
+#pitch g[data-slot]>circle:first-child{filter:drop-shadow(0 .7px .8px rgba(0,0,0,.5));transition:filter .15s}
+#pitch g[data-slot]:hover>circle:first-child{filter:drop-shadow(0 .7px .8px rgba(0,0,0,.5)) brightness(1.12)}
+
+.ghost{position:fixed;z-index:50;pointer-events:none;background:linear-gradient(135deg,var(--acc),var(--blue));color:#fff;padding:6px 14px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.35);transform:translate(-50%,-130%)}
